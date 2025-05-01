@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Buku Cerita Anak</string>
+
+    <string name="welcome_message">Selamat Datang di Buku Cerita Anak</string>
+    <string name="start_reading">Mulai Membaca</string>
+    <string name="share_app">Bagikan Aplikasi</string>
+    <string name="review_app">Beri Ulasan</string>
+
+    <string name="read_story">Bacakan Cerita</string>
+</resources>

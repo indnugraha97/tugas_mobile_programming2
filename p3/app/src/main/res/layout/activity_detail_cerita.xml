@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Gambar tanpa padding -->
+        <ImageView
+            android:id="@+id/ivGambar"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"/>
+
+        <!-- Bagian Hijau dengan tombol play di dalamnya -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#8EC1B7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnPlay"
+                android:layout_width="48dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="16dp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#F9DC4C"
+                android:layout_gravity="left"
+                android:drawableLeft="@android:drawable/ic_media_play"
+                android:paddingStart="8dp"
+                android:textAllCaps="false"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:paddingEnd="8dp"/>
+
+        </LinearLayout>
+
+        <!-- Judul Cerita -->
+        <TextView
+            android:id="@+id/tvJudul"
+            android:text="Judul Cerita"
+            android:textSize="24sp"
+            android:paddingHorizontal="16dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Isi Cerita -->
+        <TextView
+            android:id="@+id/tvIsi"
+            android:text="Isi cerita panjang akan ditampilkan di sini..."
+            android:textSize="16sp"
+            android:paddingHorizontal="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Tombol Kembali -->
+        <Button
+            android:id="@+id/btnBack"
+            android:text="Kembali"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>
