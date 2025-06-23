@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#185B4D"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="#185B4D"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <!-- Card Dzikir -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@android:color/white">
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Judul -->
+            <TextView
+                android:id="@+id/txtJudul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#228B22"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="Dzikir Pagi" />
+
+            <!-- Toolbar dummy controls (volume, font, switch) -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="14dp"
+                android:layout_gravity="center_horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnAudio"
+                    android:src="@drawable/ic_volume"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Audio"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <ImageButton
+                    android:id="@+id/btnFontPlus"
+                    android:src="@drawable/ic_font_plus"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Perbesar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <ImageButton
+                    android:id="@+id/btnFontMinus"
+                    android:src="@drawable/ic_font_minus"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Perkecil"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <!-- Switch Arab -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Arab"
+                        android:textSize="12sp"
+                        android:textColor="#666"
+                        android:layout_marginRight="4dp"/>
+                    <Switch
+                        android:id="@+id/switchArab"
+                        android:checked="true"
+                        android:thumbTint="#228B22"
+                        android:trackTint="#CCE5CC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <!-- Switch Latin -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Latin"
+                        android:textSize="12sp"
+                        android:textColor="#666"
+                        android:layout_marginRight="4dp"/>
+                    <Switch
+                        android:id="@+id/switchLatin"
+                        android:checked="true"
+                        android:thumbTint="#228B22"
+                        android:trackTint="#CCE5CC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Arab -->
+            <TextView
+                android:id="@+id/txtArab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="28sp"
+                android:layout_marginTop="18dp"/>
+
+            <!-- Latin -->
+            <TextView
+                android:id="@+id/txtLatin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Allahu laa ilaaha illaa huwal hayyul qayyuum..."
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="#444"
+                android:textSize="22sp"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Arti -->
+            <TextView
+                android:id="@+id/txtArti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Allah, tidak ada Tuhan melainkan Dia Yang Maha Hidup..."
+                android:textColor="#666"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:gravity="center"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Copy + page nav -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <ImageButton
+                    android:id="@+id/btnCopy"
+                    android:src="@drawable/ic_copy"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Copy"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/btnPrev"
+                        android:src="@drawable/ic_arrow_back"
+                        android:background="@android:color/transparent"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
+
+                    <ImageButton
+                        android:id="@+id/btnNext"
+                        android:src="@drawable/ic_arrow_next"
+                        android:background="@android:color/transparent"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Counter -->
+            <LinearLayout
+                android:id="@+id/counterLayout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/txtCounterLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Counter Dzikir:"
+                    android:textStyle="bold"
+                    android:textColor="#228B22"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="6dp">
+
+                    <Button
+                        android:id="@+id/btnResetCounter"
+                        android:text="Reset"
+                        android:textColor="#fff"
+                        android:backgroundTint="#ff6666"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="12dp"/>
+                    <TextView
+                        android:id="@+id/txtCounter"
+                        android:text="0 / 100"
+                        android:textSize="18sp"
+                        android:textColor="#222"
+                        android:layout_marginRight="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Button
+                        android:id="@+id/btnIncCounter"
+                        android:text="+"
+                        android:textColor="#fff"
+                        android:backgroundTint="#228B22"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

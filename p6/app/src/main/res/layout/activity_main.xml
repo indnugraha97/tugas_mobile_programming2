@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:orientation="vertical"
+    android:background="#185B4D"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Detail Adzan -->
+    <LinearLayout
+        android:id="@+id/detail_section"
+        android:orientation="vertical"
+        android:background="#185B4D"
+        android:paddingBottom="16dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/flagImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/circle_bg"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/countryText"
+                android:textColor="#FFFFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/muadzinText"
+            android:textColor="#99FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/arabicText"
+            android:textColor="#FFFFFFFF"
+            android:textStyle="bold"
+            android:textSize="36sp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:layout_marginTop="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/latinText"
+            android:textColor="#AAFFFFFF"
+            android:textStyle="italic"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Visualizer & Play Area -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="18dp">
+
+            <com.example.p6.VisualizerView
+                android:id="@+id/visualizerView"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:background="@drawable/visualizer_bg" />
+
+            <ImageButton
+                android:id="@+id/playButton"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:background="@drawable/round_green"
+                android:src="@android:drawable/ic_media_play"
+                android:scaleType="center"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="8dp"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- List Adzan -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="20pt"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerAdzan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_white_rounded"
+            android:paddingTop="10dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:elevation="8dp"/>
+    </FrameLayout>
+
+    <!-- Banner Ad - Floating look -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_gravity="bottom|center_horizontal">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/banner_rounded_bg"/>
+    </FrameLayout>
+</LinearLayout>

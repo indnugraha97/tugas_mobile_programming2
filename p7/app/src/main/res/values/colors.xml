@@ -1,0 +1,11 @@
+<resources>
+    <color name="green_primary">#185B4D</color>
+    <color name="green_button">#228B22</color>
+    <color name="white_card">#FFFFFF</color>
+    <color name="grey_text">#666666</color>
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>
